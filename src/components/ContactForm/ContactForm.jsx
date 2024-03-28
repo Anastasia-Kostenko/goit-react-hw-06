@@ -7,7 +7,7 @@ import * as Yup from "yup";
 
 import { useId } from "react";
 import { useDispatch } from "react-redux";
-import { addNumber } from "../../redux/contactSlice";
+import { addNumber } from "../../redux/contactsSlice";
 
 const FeedbackSchema = Yup.object().shape({
   name: Yup.string()

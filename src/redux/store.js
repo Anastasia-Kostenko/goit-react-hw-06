@@ -12,8 +12,8 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-import { numberReducer } from "./contactSlice";
-import { filterReducer } from "./filterSlice";
+import { numberReducer } from "./contactsSlice";
+import { filterReducer } from "./filtersSlice";
 
 const persistConfig = {
   key: "root",
@@ -26,10 +26,10 @@ const rootReducer = combineSlices({
   numbers: numberReducer,
 });
 
-const persistedTAskReducer = persistReducer(persistConfig, rootReducer);
+const combineReducers = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: persistedTAskReducer,
+  reducer: combineReducers,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

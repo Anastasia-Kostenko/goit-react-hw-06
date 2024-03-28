@@ -9,7 +9,7 @@ const initialState = [
   { id: "id-6", name: "Jack Berry", number: "44124-839-12" },
 ];
 
-const contactSlice = createSlice({
+const contactsSlice = createSlice({
   name: "numbers",
   initialState: initialState,
   reducers: {
@@ -22,5 +22,5 @@ const contactSlice = createSlice({
   },
 });
 
-export const { deleteNumber, addNumber } = contactSlice.actions;
-export const numberReducer = contactSlice.reducer;
+export const { deleteNumber, addNumber } = contactsSlice.actions;
+export const numberReducer = contactsSlice.reducer;
