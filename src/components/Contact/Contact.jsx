@@ -1,14 +1,12 @@
 import { FaPerson } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 
 import css from "./Contact.module.css";
 
-import { useDispatch } from "react-redux";
-import { deleteNumber } from "../../redux/contactsSlice";
-
 export const Contact = ({ dataContact: { id, name, number } }) => {
   const dispatch = useDispatch();
-  const deleteContact = () => dispatch(deleteNumber(id));
+  const deleteContact = () => dispatch(deleteContact(id));
 
   return (
     <>
