@@ -7,14 +7,13 @@ import css from "./ContactList.module.css";
 
 export const ContactList = () => {
   const dataContact = useSelector(getContact);
-  const filterQuery = useSelector(getFilter);
-
-  const filterData = dataContact.filter((data) => {
-    return data.name.toLowerCase().includes(filterQuery.toLowerCase());
+  const filtQuery = useSelector(getFilter);
+  const filtData = dataContact.filter((data) => {
+    return data.name.toLowerCase().includes(filtQuery.toLowerCase());
   });
   return (
     <ul className={css.list}>
-      {filterData.map((data) => {
+      {filtData.map((data) => {
         return <Contact key={data.id} dataContact={data} />;
       })}
     </ul>
