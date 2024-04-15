@@ -1,15 +1,17 @@
-import { ContactList } from "./components/ContactList/ContactList";
-import { SearchBox } from "./components/SearchBox/SearchBox";
-import { ContactForm } from "./components/ContactForm/ContactForm";
-import css from "./App.module.css";
+import ContactList from "./components/ContactList/ContactList";
+import SearchBox from "./components/SearchBox/SearchBox";
+import "./App.css";
+import ContactForm from "./components/ContactForm/ContactForm";
 
-export const App = () => {
+function App() {
   return (
-    <div className={css.app}>
-      <h1 className={css.title}>Phonebook</h1>
+    <div className="container">
+      <h1 className="title">Phonebook</h1>
       <ContactForm />
       <SearchBox />
       <ContactList />
     </div>
   );
-};
+}
+
+export default App;

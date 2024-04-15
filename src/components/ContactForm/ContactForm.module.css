@@ -10,6 +10,7 @@
 .field {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .fieldInput {
@@ -33,23 +34,15 @@
   flex-direction: column;
 }
 
-.field {
-  margin-bottom: 10px;
-}
-
-.btn {
-  padding: 10px;
-  border-radius: 20px;
-  background-color: gainsboro;
+.fieldBtn {
+  height: 40px;
+  margin: auto 0;
+  background-color: #dcdcdc;
   cursor: pointer;
-  transition: 450ms;
+  border-radius: 13px;
+  transition: 0.35s;
 }
 
-.btn:is(:hover, :focus) {
+.fieldBtn:is(:hover, :focus) {
   background-color: rgba(0, 104, 115, 0.5);
-}
-
-.title {
-  font-size: 18px;
-  font-weight: 700;
 }

@@ -1,7 +1,22 @@
-.list {
-  margin-top: 50px;
+.contactList {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: space-around;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.contactListItem {
+  display: flex;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #9be4ff80;
+}
+
+@media screen and (min-width: 768px) {
+  .contactListItem {
+    max-width: 288px;
+  }
 }
